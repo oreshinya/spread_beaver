@@ -1,5 +1,8 @@
-require "spread_beaver/version"
+require "active_support/core_ext/class/attribute_accessors"
+require "active_support/core_ext/string/output_safety"
+require "connection_pool"
+require "execjs"
+require "request_store"
 
-module SpreadBeaver
-  # Your code goes here...
-end
+require "spread_beaver/version"
+require "spread_beaver/runner"
