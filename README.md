@@ -49,3 +49,7 @@ Execute `exec_queued_module` with stored hash data.
 
 - **SpreadBeaver::Runner.exec(module_name, props)**:  
 Execute `exec_module` with connection pooling.
+
+## Example
+Rails, browserify, react, flux, server side rendering example.  
+Go to https://github.com/oreshinya/spread_beaver/tree/master/example !
