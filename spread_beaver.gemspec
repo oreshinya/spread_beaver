@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["s.takahashi313@gmail.com"]
   spec.summary       = "Server side Javascript runner in Ruby on Rails."
   spec.description   = "Server side Javascript runner in Ruby on Rails."
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/oreshinya/spread_beaver"
   spec.license       = "MIT"
 
   spec.files         = Dir[
@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "connection_pool"
   spec.add_dependency "execjs"
   spec.add_dependency "request_store"
-  spec.add_dependency "rails", ">= 4.2"
+  spec.add_dependency "rails", ">= 4.0"
 end
