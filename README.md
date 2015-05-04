@@ -1,31 +1,51 @@
 # SpreadBeaver
-
-TODO: Write a gem description
+Server side Javascript runner in Ruby on Rails.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spread_beaver'
+gem 'spread_beaver', github: "oreshinya/spread_beaver"
 ```
 
-And then execute:
+## Getting Started
 
-    $ bundle
+### Edit config/application.rb
+```
+# These are the defaults if you dont specify any yourself
+config.spread_beaver.pool_size = 10 #ExecJS instance size
+config.spread_beaver.timeout = 20 #ExecJS timeout
+config.spread_beaver.bundle = "server-side-bundle.js" #Javascript file
+```
 
-Or install it yourself as:
+### Create config/initializers/spread_beaver.rb
+```
+module SpreadBeaver
+  class Runner
+    # Execute javascript in javascript context before every SpreadBeaver::Runner.exec
+    def initialize_script
+      "clearAllStores();"
+    end
 
-    $ gem install spread_beaver
+    # Execute queued javascript in javascript context before every SpreadBeaver::Runner.exec
+    def exec_queued_module module_name, props
+      "#{module_name}.init(#{props_to_s(props)});"
+    end
 
-## Usage
+    # Execute javascript by SpreadBeaver::Runner.exec
+    def exec_module module_name, props
+      "#{module_name}.render(#{props_to_s(props)});"
+    end
+  end
+end
+```
 
-TODO: Write usage instructions here
+## API
 
-## Contributing
+- **SpreadBeaver::Runner.queue(module_name, props)**:  
+Push hash that has passed values to request store.  
+Execute `exec_queued_module` with stored hash data.
 
-1. Fork it ( https://github.com/[my-github-username]/spread_beaver/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+- **SpreadBeaver::Runner.exec(module_name, props)**:  
+Execute `exec_module` with connection pooling.

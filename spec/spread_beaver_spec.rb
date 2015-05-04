@@ -42,7 +42,6 @@ describe SpreadBeaver do
 
     module SpreadBeaver
       class Runner
-        private
         def initialize_script
           "clearAllStores();"
         end
