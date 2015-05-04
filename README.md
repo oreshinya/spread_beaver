@@ -1,5 +1,6 @@
 # SpreadBeaver
-Server side Javascript runner in Ruby on Rails.
+Server side Javascript runner in Ruby on Rails.  
+For example, you use to React + Flux + Server side rendering.
 
 ## Installation
 
