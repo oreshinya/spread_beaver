@@ -51,5 +51,5 @@ Execute `exec_queued_module` with stored hash data.
 Execute `exec_module` with connection pooling.
 
 ## Example
-Rails, browserify, react, flux, server side rendering example.  
+Rails, Browserify, React, Flux, Server side rendering example.  
 Go to https://github.com/oreshinya/spread_beaver/tree/master/example !
