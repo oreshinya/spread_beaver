@@ -16,7 +16,7 @@ gem 'spread_beaver', github: "oreshinya/spread_beaver"
 # These are the defaults if you dont specify any yourself
 config.spread_beaver.pool_size = 10 #ExecJS instance size
 config.spread_beaver.timeout = 20 #ExecJS timeout
-config.spread_beaver.bundle = "server-side-bundle.js" #Javascript file
+config.spread_beaver.bundle = "server-side-bundle.js" #Javascript file placed at under app/assets/javascripts
 ```
 
 ### Create config/initializers/spread_beaver.rb
