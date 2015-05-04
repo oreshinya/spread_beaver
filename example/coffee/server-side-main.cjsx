@@ -7,7 +7,7 @@ if false
 
 React = require "react"
 
-global =
+global.context =
   clearAllStores: () ->
     for Store in stores
       Store.clear()

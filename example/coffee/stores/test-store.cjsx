@@ -1,4 +1,6 @@
 module.exports =
+  _store: {}
+
   clear: ->
     @_store = {}
 

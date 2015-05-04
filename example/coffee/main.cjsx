@@ -1,6 +1,6 @@
 if false
   bulk = require "bulk-require"
-  bulk "#{__dirname}/../", [
+  bulk "#{__dirname}/", [
     "components/**/*.cjsx"
     "stores/**/*.cjsx"
   ]
@@ -40,7 +40,7 @@ hoge =
     moduleName = node.getAttribute moduleNameAttr
     propsJSON = node.getAttribute propsNameAttr
     return {
-      moduleName: "../" + moduleName
+      moduleName: "./"+moduleName
       props: propsJSON and JSON.parse propsJSON
     }
 
