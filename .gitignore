@@ -13,3 +13,16 @@
 *.o
 *.a
 mkmf.log
+
+# Ignore bundler config.
+/example/.bundle
+
+# Ignore the default SQLite database.
+/example/db/*.sqlite3
+/example/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/example/log/*
+!/example/log/.keep
+/example/tmp
+/example/vendor/bundle
