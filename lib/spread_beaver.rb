@@ -6,3 +6,4 @@ require "request_store"
 
 require "spread_beaver/version"
 require "spread_beaver/runner"
+require "spread_beaver/railtie"
