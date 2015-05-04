@@ -6,7 +6,7 @@ Server side Javascript runner in Ruby on Rails.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spread_beaver', github: "oreshinya/spread_beaver"
+gem 'spread_beaver'
 ```
 
 ## Getting Started
