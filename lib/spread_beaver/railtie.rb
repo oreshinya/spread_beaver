@@ -13,11 +13,11 @@ module SpreadBeaver
     end
 
     config.after_initialize do |app|
-      cnf = config.spread_beaver
+      cnf = app.config.spread_beaver
       setup = -> {
         SpreadBeaver::Runner.setup!(
           app.assets[cnf.bundle].to_s,
-          {size: cnf[:pool_size], timeout: cnf[:timeout]}
+          {size: cnf.pool_size, timeout: cnf.timeout}
         )
       }
       setup.call
