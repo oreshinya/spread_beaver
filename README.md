@@ -13,7 +13,7 @@ gem 'spread_beaver'
 ## Getting Started
 
 ### Edit config/application.rb
-```
+```ruby
 # These are the defaults if you dont specify any yourself
 config.spread_beaver.pool_size = 10 #ExecJS instance size
 config.spread_beaver.timeout = 20 #ExecJS timeout
@@ -21,7 +21,7 @@ config.spread_beaver.bundle = "server-side-bundle.js" #Javascript file placed at
 ```
 
 ### Create config/initializers/spread_beaver.rb
-```
+```ruby
 module SpreadBeaver
   class Runner
     # Execute javascript in javascript context before every SpreadBeaver::Runner.exec
