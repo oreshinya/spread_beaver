@@ -20,7 +20,7 @@ config.spread_beaver.timeout = 20 #ExecJS timeout
 config.spread_beaver.bundle = "server-side-bundle.js" #Javascript file placed at under app/assets/javascripts
 ```
 
-### Create config/initializers/spread_beaver.rb
+### Create config/initializers/spread_beaver.rb (for example)
 ```ruby
 module SpreadBeaver
   class Runner
